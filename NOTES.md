@@ -32,4 +32,6 @@ this time its the 16th birthday of yours. many many happy returns of the day. TI
 
 start kortesi IDK KI PLAN kortesilam, likhte boshe mone hoy shob faka hoye geche brain, but shuru korii
 
-at first reallyy tore thanks for being a part of my life and being the friend i never got.
+at first reallyy tore thanks for being a part of my life and being the friend i never got. ami janina life e ki hoitesilo kemne hoitesilo, but one day there was you. ever since that day. koto koto things je hoise but after everything. im glad je we're still here. talking and stuff.
+
+there will be more texts also the surprise. janos i miss last year. last jokhon amra so so much close asilam. ami shobtheke regret kori ekta thing. jeita hoccche tor sathe enough korimane deepy things niye kotha bolte parinai. koren dorkar chilo to talk with out about things, everything

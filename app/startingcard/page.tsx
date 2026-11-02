@@ -7,9 +7,9 @@ import { nextRoute } from "@/lib/flow";
 const letter = {
   greeting: "Happy Birthday, Orpa.",
   paragraphs: [
-    "Today is your day, and I wanted to make something just for you. Not a card from a shop, not a quick message, but a little place built with all my love.",
-    "You make ordinary days feel special, and I'm grateful for every moment with you. I hope today is filled with laughter, good food, and everything that makes you smile.",
-    "Take your time and enjoy this.",
+    "This is a little gift tor nonvez prepared for you.",
+    "its pretty orginary but, ummmm, made with Lovee!.",
+    "kalke to exam aseeee, beshi time lagbe na, take your time and enjoy this.",
   ],
   signoff: "Yours,",
   name: "nonvez",
