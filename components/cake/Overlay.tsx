@@ -20,6 +20,7 @@ const CAT_BUBBLE_POS =
   "absolute -left-28 bottom-46 sm:-left-32 sm:bottom-50";
 const BUBBLE_ARROW =
   "absolute -bottom-1 right-2 h-5 w-5 rotate-45 bg-[#f7ede3]";
+const catImage = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/cat-orpa.png`;
 
 export function Overlay({
   copy,
@@ -121,7 +122,7 @@ export function Overlay({
             </motion.div>
           )}
           <Image
-            src="/cat-orpa.png"
+            src={catImage}
             alt="A friendly cat"
             width={210}
             height={210}
@@ -146,7 +147,7 @@ export function Overlay({
             <span className="relative">{typedMessage}</span>
           </div>
           <Image
-            src="/cat-orpa.png"
+            src={catImage}
             alt="A friendly cat"
             width={210}
             height={210}
