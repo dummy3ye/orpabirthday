@@ -1,3 +1,3 @@
 export const nextRoute = "/cakewithorpa";
 
-export const cakeNextRoute = "/photos-1";
+export const cakeNextRoute = "/letter";

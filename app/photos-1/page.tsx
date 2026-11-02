@@ -424,13 +424,13 @@ export default function PhotosOnePage() {
         </section>
       </div>
 
-      {/* Floating "Next →" Button */}
+      {/* Floating "Back to Letter" Button */}
       <div className="fixed bottom-6 right-6 z-40">
         <Link
           href="/letter"
           className="inline-flex items-center gap-2 rounded-full border border-amber-900/60 bg-[#2e1d15]/95 px-6 py-2.5 font-handwriting text-2xl font-bold tracking-wide text-amber-100 shadow-[0_12px_30px_rgba(0,0,0,0.8),inset_0_1px_1px_rgba(255,255,255,0.2)] backdrop-blur-md transition hover:-translate-y-0.5 hover:border-amber-600 hover:bg-[#3c251b] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-200"
         >
-          Next <span aria-hidden="true">→</span>
+          <span aria-hidden="true">←</span> Letter
         </Link>
       </div>
 

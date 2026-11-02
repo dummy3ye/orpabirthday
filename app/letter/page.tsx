@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform, useVelocity } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useMemo } from "react";
 
 // Replace the text in LETTER with the real letter. Each item becomes one paragraph.
@@ -376,6 +377,15 @@ export default function LetterPage() {
           {LETTER.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
+        </div>
+
+        <div className="mt-16 flex justify-end">
+          <Link
+            href="/photos-1"
+            className="inline-flex items-center gap-2 rounded-full border border-pink-300/40 bg-pink-950/40 px-6 py-2.5 font-body text-base font-medium text-[#f7ede3] backdrop-blur-md transition hover:-translate-y-0.5 hover:border-pink-300 hover:bg-pink-900/60 focus-visible:outline-2 focus-visible:outline-[#f7ede3]"
+          >
+            Memories <span aria-hidden="true">→</span>
+          </Link>
         </div>
       </article>
     </main>
