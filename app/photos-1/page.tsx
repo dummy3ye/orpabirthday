@@ -24,7 +24,7 @@ type Memory = {
 const MEMORIES: Memory[] = [
   {
     id: 1,
-    image: "/photos/photo-1.jpg",
+    image: "/photos/photo-1.png",
     caption: "Where it all began...",
     note: "that nervous first smile that changed everything for me.",
     date: "Day One",
@@ -36,7 +36,7 @@ const MEMORIES: Memory[] = [
   },
   {
     id: 2,
-    image: "/photos/photo-2.jpg",
+    image: "/photos/photo-2.png",
     caption: "My absolute favorite smile.",
     note: "the kind of smile that makes the whole world melt away.",
     date: "Golden hour",
