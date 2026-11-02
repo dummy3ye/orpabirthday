@@ -64,7 +64,7 @@ const MEMORIES: Memory[] = [
     caption: "The quietest days with you.",
     note: "just existing together is so so much more than enough.",
     date: "Sunday lazy air",
-    desktopClass: "md:top-[55%] md:left-[3%] md:w-[26rem]",
+    desktopClass: "md:top-[60%] md:left-[3%] md:w-[26rem]",
     mobileRotation: "rotate-[2.5deg]",
     aspectClass: "aspect-[16/10]",
     attachment: "top-tape",
