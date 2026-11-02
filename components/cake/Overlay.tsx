@@ -20,7 +20,7 @@ const CAT_BUBBLE_POS =
   "absolute -left-28 bottom-46 sm:-left-32 sm:bottom-50";
 const BUBBLE_ARROW =
   "absolute -bottom-1 right-2 h-5 w-5 rotate-45 bg-[#f7ede3]";
-const catImage = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/cat-orpa.png`;
+const catImage = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/cat-orpa.png?v=2`;
 
 export function Overlay({
   copy,
