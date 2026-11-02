@@ -24,7 +24,7 @@ type Memory = {
 const MEMORIES: Memory[] = [
   {
     id: 1,
-    image: "/photos/photo-1.png", // 304x540 (Portrait)
+    image: "/photos/photo-1.png",
     caption: "Where it all began...",
     note: "that nervous first smile that changed everything for me.",
     date: "Day One",
@@ -36,11 +36,11 @@ const MEMORIES: Memory[] = [
   },
   {
     id: 2,
-    image: "/photos/photo-2.png", // 1366x768 (Landscape)
+    image: "/photos/photo-2.png",
     caption: "My absolute favorite smile.",
     note: "the kind of smile that makes the whole world melt away.",
     date: "Golden hour",
-    desktopClass: "md:top-[4%] md:left-[35%] md:w-[19.5rem]",
+    desktopClass: "md:top-[3%] md:left-[32%] md:w-[22rem]",
     mobileRotation: "rotate-[2deg]",
     aspectClass: "aspect-[16/10]",
     attachment: "brass-pin",
@@ -48,7 +48,7 @@ const MEMORIES: Memory[] = [
   },
   {
     id: 3,
-    image: "/photos/photo-3.jpg", // 2048x3641 (Portrait)
+    image: "/photos/photo-3.jpg",
     caption: "Every adventure with you.",
     note: "getting lost anywhere is fine as long as you're holding my hand.",
     date: "Somewhere special",
@@ -60,23 +60,23 @@ const MEMORIES: Memory[] = [
   },
   {
     id: 4,
-    image: "/photos/photo-4.jpg", // 1080x1920 (Portrait)
+    image: "/photos/photo-4.jpg",
     caption: "The quietest days with you.",
     note: "just existing together is so so much more than enough.",
     date: "Sunday lazy air",
-    desktopClass: "md:top-[51%] md:left-[5%] md:w-[15.5rem]",
+    desktopClass: "md:top-[51%] md:left-[4%] md:w-[20rem]",
     mobileRotation: "rotate-[2.5deg]",
-    aspectClass: "aspect-[9/16]",
+    aspectClass: "aspect-[16/10]",
     attachment: "top-tape",
     tilt: 2.5,
   },
   {
     id: 5,
-    image: "/photos/photo-5.jpg", // 601x805 (Classic Portrait 3:4)
+    image: "/photos/photo-5.jpg",
     caption: "Still laughing about this day.",
     note: "my stomach hurt from laughing so much with you ari.",
     date: "A goofy memory",
-    desktopClass: "md:top-[52%] md:left-[37%] md:w-[17rem]",
+    desktopClass: "md:top-[52%] md:left-[38%] md:w-[18.5rem]",
     mobileRotation: "-rotate-[2deg]",
     aspectClass: "aspect-[3/4]",
     attachment: "washi-tape",
@@ -84,11 +84,11 @@ const MEMORIES: Memory[] = [
   },
   {
     id: 6,
-    image: "/photos/photo-6.jpg", // 1268x768 (Landscape)
+    image: "/photos/photo-6.jpg",
     caption: "Looking forward to everything next.",
     note: "every tomorrow, every soft hope, always with you.",
     date: "Always & Forever",
-    desktopClass: "md:top-[52%] md:left-[69%] md:w-[19.5rem]",
+    desktopClass: "md:top-[58%] md:left-[70%] md:w-[21.5rem]",
     mobileRotation: "rotate-[2deg]",
     aspectClass: "aspect-[16/10]",
     attachment: "wood-pin",
