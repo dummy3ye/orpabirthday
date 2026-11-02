@@ -28,7 +28,7 @@ const MEMORIES: Memory[] = [
     caption: "Where it all began...",
     note: "that nervous first smile that changed everything for me.",
     date: "Day One",
-    desktopClass: "md:top-[3%] md:left-[5%] md:w-[15rem]",
+    desktopClass: "md:top-[2%] md:left-[3%] md:w-[15rem]",
     mobileRotation: "-rotate-[2.5deg]",
     aspectClass: "aspect-[9/16]",
     attachment: "corner-tape",
@@ -40,7 +40,7 @@ const MEMORIES: Memory[] = [
     caption: "My absolute favorite smile.",
     note: "the kind of smile that makes the whole world melt away.",
     date: "Golden hour",
-    desktopClass: "md:top-[3%] md:left-[32%] md:w-[22rem]",
+    desktopClass: "md:top-[2%] md:left-[27%] md:w-[26rem]",
     mobileRotation: "rotate-[2deg]",
     aspectClass: "aspect-[16/10]",
     attachment: "brass-pin",
@@ -52,7 +52,7 @@ const MEMORIES: Memory[] = [
     caption: "Every adventure with you.",
     note: "getting lost anywhere is fine as long as you're holding my hand.",
     date: "Somewhere special",
-    desktopClass: "md:top-[3%] md:left-[72%] md:w-[15.5rem]",
+    desktopClass: "md:top-[2%] md:left-[76%] md:w-[15.5rem]",
     mobileRotation: "-rotate-[2deg]",
     aspectClass: "aspect-[9/16]",
     attachment: "dual-tape",
@@ -64,7 +64,7 @@ const MEMORIES: Memory[] = [
     caption: "The quietest days with you.",
     note: "just existing together is so so much more than enough.",
     date: "Sunday lazy air",
-    desktopClass: "md:top-[51%] md:left-[4%] md:w-[20rem]",
+    desktopClass: "md:top-[49%] md:left-[3%] md:w-[24rem]",
     mobileRotation: "rotate-[2.5deg]",
     aspectClass: "aspect-[16/10]",
     attachment: "top-tape",
@@ -76,7 +76,7 @@ const MEMORIES: Memory[] = [
     caption: "Still laughing about this day.",
     note: "my stomach hurt from laughing so much with you ari.",
     date: "A goofy memory",
-    desktopClass: "md:top-[52%] md:left-[38%] md:w-[18.5rem]",
+    desktopClass: "md:top-[50%] md:left-[37%] md:w-[22rem]",
     mobileRotation: "-rotate-[2deg]",
     aspectClass: "aspect-[3/4]",
     attachment: "washi-tape",
@@ -88,7 +88,7 @@ const MEMORIES: Memory[] = [
     caption: "Looking forward to everything next.",
     note: "every tomorrow, every soft hope, always with you.",
     date: "Always & Forever",
-    desktopClass: "md:top-[58%] md:left-[70%] md:w-[21.5rem]",
+    desktopClass: "md:top-[57%] md:left-[67%] md:w-[25.5rem]",
     mobileRotation: "rotate-[2deg]",
     aspectClass: "aspect-[16/10]",
     attachment: "wood-pin",
@@ -272,8 +272,8 @@ function PolaroidCard({
       whileTap={isModal ? undefined : { scale: 0.98 }}
       className={`group relative block text-left outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 ${
         isModal
-          ? "w-full max-w-[min(90vw,28rem)] cursor-default"
-          : `w-full max-w-[16rem] cursor-zoom-in ${memory.mobileRotation} md:rotate-0 md:absolute ${memory.desktopClass}`
+          ? "w-full max-w-[min(90vw,32rem)] cursor-default"
+          : `w-full cursor-zoom-in ${memory.mobileRotation} md:rotate-0 md:absolute ${memory.desktopClass}`
       }`}
       aria-label={`View photo: ${memory.caption}`}
     >
