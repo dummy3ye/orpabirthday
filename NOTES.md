@@ -23,3 +23,13 @@ a llittle hoorror
 
 dear loml,
 i miss you, last night i have a dream. yes it was about you. i saw the worst possible thing. you left me all alone in this world to live by myself. i know know how to write all the things ive felt. i dont even know if its possible. i woke up. im still really missing you. where are you tanha, what do you eat. i hate how much terribly i miss you. Do you think about me ? do you think i have forgotten you Ari. i wanna tell you all the things happening here
+
+
+
+Happy Birthdayy dearrr Orpaa.
+
+this time its the 16th birthday of yours. many many happy returns of the day. TIME REALLY passes so muchhhh fast. 13. 14. 15 and ari is nowww 16
+
+start kortesi IDK KI PLAN kortesilam, likhte boshe mone hoy shob faka hoye geche brain, but shuru korii
+
+at first reallyy tore thanks for being a part of my life and being the friend i never got.
