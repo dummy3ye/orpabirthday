@@ -1,0 +1,16 @@
+export const CAKE_TIMINGS = {
+  introDolly: 2500,
+  candleIgniteDelay: 800,
+  candleIgniteStagger: 60,
+  wishDelay: 1200,
+  readyDelay: 3500,
+  wishHold: 2500,
+  extinguishStagger: 38,
+  extinguishDuration: 1200,
+  darkBeat: 600,
+  celebrationToCut: 1700,
+  cutDuration: 5000,
+  missingAudioFallback: 10000,
+  micCalibration: 500,
+  micSustain: 350,
+} as const;
