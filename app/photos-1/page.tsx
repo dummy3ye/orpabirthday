@@ -88,7 +88,7 @@ const MEMORIES: Memory[] = [
     caption: "Looking forward to everything next.",
     note: "every tomorrow, every soft hope, always with you.",
     date: "Always & Forever",
-    desktopClass: "md:top-[52%] md:left-[72%]",
+    desktopClass: "md:top-[56%] md:left-[72%]",
     mobileRotation: "rotate-[2deg]",
     aspect: "aspect-[4/3]",
     attachment: "wood-pin",
