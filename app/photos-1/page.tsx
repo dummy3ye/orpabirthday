@@ -15,82 +15,82 @@ type Memory = {
   date?: string;
   desktopClass: string;
   mobileRotation: string;
-  aspect: string;
   attachment: AttachmentStyle;
   tilt: number;
+  aspectClass: string;
 };
 
-// Perfectly spaced 2x3 grid across the board so cards NEVER overlap each other
+// Precisely spaced and sized to match each photo's true orientation
 const MEMORIES: Memory[] = [
   {
     id: 1,
-    image: "/photos/photo-1.png",
+    image: "/photos/photo-1.png", // 304x540 (Portrait)
     caption: "Where it all began...",
     note: "that nervous first smile that changed everything for me.",
     date: "Day One",
-    desktopClass: "md:top-[6%] md:left-[5%]",
-    mobileRotation: "-rotate-[2deg]",
-    aspect: "aspect-square",
+    desktopClass: "md:top-[3%] md:left-[5%] md:w-[15rem]",
+    mobileRotation: "-rotate-[2.5deg]",
+    aspectClass: "aspect-[9/16]",
     attachment: "corner-tape",
-    tilt: -3.5,
+    tilt: -3,
   },
   {
     id: 2,
-    image: "/photos/photo-2.png",
+    image: "/photos/photo-2.png", // 1366x768 (Landscape)
     caption: "My absolute favorite smile.",
     note: "the kind of smile that makes the whole world melt away.",
     date: "Golden hour",
-    desktopClass: "md:top-[5%] md:left-[38%]",
-    mobileRotation: "rotate-[2.5deg]",
-    aspect: "aspect-[4/5]",
+    desktopClass: "md:top-[4%] md:left-[35%] md:w-[19.5rem]",
+    mobileRotation: "rotate-[2deg]",
+    aspectClass: "aspect-[16/10]",
     attachment: "brass-pin",
-    tilt: 2.5,
+    tilt: 2,
   },
   {
     id: 3,
-    image: "/photos/photo-3.jpg",
+    image: "/photos/photo-3.jpg", // 2048x3641 (Portrait)
     caption: "Every adventure with you.",
     note: "getting lost anywhere is fine as long as you're holding my hand.",
     date: "Somewhere special",
-    desktopClass: "md:top-[6%] md:left-[71%]",
+    desktopClass: "md:top-[3%] md:left-[72%] md:w-[15.5rem]",
     mobileRotation: "-rotate-[2deg]",
-    aspect: "aspect-[4/3]",
+    aspectClass: "aspect-[9/16]",
     attachment: "dual-tape",
     tilt: -2.5,
   },
   {
     id: 4,
-    image: "/photos/photo-4.jpg",
+    image: "/photos/photo-4.jpg", // 1080x1920 (Portrait)
     caption: "The quietest days with you.",
     note: "just existing together is so so much more than enough.",
     date: "Sunday lazy air",
-    desktopClass: "md:top-[56%] md:left-[5%] md:max-w-[18rem]",
+    desktopClass: "md:top-[51%] md:left-[5%] md:w-[15.5rem]",
     mobileRotation: "rotate-[2.5deg]",
-    aspect: "aspect-[4/5]",
+    aspectClass: "aspect-[9/16]",
     attachment: "top-tape",
-    tilt: 3,
+    tilt: 2.5,
   },
   {
     id: 5,
-    image: "/photos/photo-5.jpg",
+    image: "/photos/photo-5.jpg", // 601x805 (Classic Portrait 3:4)
     caption: "Still laughing about this day.",
     note: "my stomach hurt from laughing so much with you ari.",
     date: "A goofy memory",
-    desktopClass: "md:top-[57%] md:left-[39%]",
+    desktopClass: "md:top-[52%] md:left-[37%] md:w-[17rem]",
     mobileRotation: "-rotate-[2deg]",
-    aspect: "aspect-square",
+    aspectClass: "aspect-[3/4]",
     attachment: "washi-tape",
     tilt: -2,
   },
   {
     id: 6,
-    image: "/photos/photo-6.jpg",
+    image: "/photos/photo-6.jpg", // 1268x768 (Landscape)
     caption: "Looking forward to everything next.",
     note: "every tomorrow, every soft hope, always with you.",
     date: "Always & Forever",
-    desktopClass: "md:top-[56%] md:left-[72%]",
+    desktopClass: "md:top-[52%] md:left-[69%] md:w-[19.5rem]",
     mobileRotation: "rotate-[2deg]",
-    aspect: "aspect-[4/3]",
+    aspectClass: "aspect-[16/10]",
     attachment: "wood-pin",
     tilt: 2,
   },
@@ -103,10 +103,6 @@ const MEMORIES: Memory[] = [
 function SolidWoodSlabBackground() {
   return (
     <div className="pointer-events-none fixed inset-0 -z-10" aria-hidden="true">
-      {/* 
-        Single continuous piece of rich warm amber/chestnut hardwood 
-        (NO horizontal cuts, NO broken planks, NO slats)
-      */}
       <div
         className="h-full w-full"
         style={{
@@ -142,7 +138,6 @@ function SolidWoodSlabBackground() {
           `,
         }}
       >
-        {/* Subtle authentic wood grain fiber overlay */}
         <svg className="h-full w-full opacity-40 mix-blend-overlay">
           <filter id="solid-wood-fibers">
             <feTurbulence type="fractalNoise" baseFrequency="0.008 0.18" numOctaves="3" result="grain" />
@@ -152,7 +147,6 @@ function SolidWoodSlabBackground() {
         </svg>
       </div>
 
-      {/* Gentle vignette glow keeping edges smooth without breaking the wood */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(35,14,5,0.45)_100%)] pointer-events-none" />
     </div>
   );
@@ -257,19 +251,6 @@ function PolaroidCard({
   isModal?: boolean;
 }) {
   const [imageError, setImageError] = useState(false);
-  const [aspectRatio, setAspectRatio] = useState<number | null>(null);
-
-  // Automatically detect the natural aspect ratio of the image:
-  // - If height > width: portrait (~3/4 or 4/5)
-  // - If width > height: landscape (~4/3 or 3/2)
-  // - Defaults smoothly to square or memory.aspect while loading
-  const dynamicAspectClass = aspectRatio
-    ? aspectRatio < 0.85
-      ? "aspect-[4/5]"
-      : aspectRatio > 1.15
-      ? "aspect-[4/3]"
-      : "aspect-square"
-    : memory.aspect;
 
   return (
     <motion.button
@@ -291,8 +272,8 @@ function PolaroidCard({
       whileTap={isModal ? undefined : { scale: 0.98 }}
       className={`group relative block text-left outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 ${
         isModal
-          ? "w-full max-w-[min(90vw,27rem)] cursor-default"
-          : `w-full max-w-[15rem] sm:max-w-[16.5rem] cursor-zoom-in ${memory.mobileRotation} md:rotate-0 md:absolute ${memory.desktopClass}`
+          ? "w-full max-w-[min(90vw,28rem)] cursor-default"
+          : `w-full max-w-[16rem] cursor-zoom-in ${memory.mobileRotation} md:rotate-0 md:absolute ${memory.desktopClass}`
       }`}
       aria-label={`View photo: ${memory.caption}`}
     >
@@ -300,20 +281,15 @@ function PolaroidCard({
 
       {/* Realistic White Polaroid Body */}
       <div className="relative rounded-[2px] bg-[#fffefb] p-3 pb-5 shadow-[0_6px_12px_rgba(0,0,0,0.3),0_20px_40px_rgba(0,0,0,0.55),inset_0_0_0_1px_rgba(0,0,0,0.06)] transition-all duration-300 group-hover:shadow-[0_12px_24px_rgba(0,0,0,0.35),0_32px_65px_rgba(0,0,0,0.8)] sm:p-3.5 sm:pb-5">
-        <div className={`relative block overflow-hidden rounded-[1px] bg-[#1a1410] shadow-[inset_0_2px_4px_rgba(0,0,0,0.55)] transition-all duration-500 ${dynamicAspectClass}`}>
+        <div className={`relative block overflow-hidden rounded-[1px] bg-[#1a1410] shadow-[inset_0_2px_4px_rgba(0,0,0,0.55)] transition-all duration-300 ${memory.aspectClass}`}>
           {!imageError ? (
             <Image
               src={memory.image}
               alt=""
               fill
-              sizes="(max-width: 640px) 45vw, (max-width: 1024px) 240px, 280px"
+              sizes="(max-width: 640px) 45vw, (max-width: 1024px) 260px, 320px"
               className="object-cover transition duration-700 group-hover:scale-105"
               onError={() => setImageError(true)}
-              onLoadingComplete={(img) => {
-                if (img.naturalWidth && img.naturalHeight) {
-                  setAspectRatio(img.naturalWidth / img.naturalHeight);
-                }
-              }}
             />
           ) : (
             <div className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-[#38261e] via-[#241712] to-[#120a06] p-4 text-center">
@@ -390,10 +366,10 @@ export default function PhotosOnePage() {
       <SolidWoodSlabBackground />
 
       {/* Scattered Photo Board Container with NO overlapping pictures */}
-      <div className="relative mx-auto w-full max-w-6xl">
+      <div className="relative mx-auto w-full max-w-7xl">
         {/* Desktop View (md+): Balanced, non-overlapping natural layout */}
         <section
-          className="relative hidden h-[840px] min-h-[760px] w-full md:block"
+          className="relative hidden h-[920px] min-h-[850px] w-full md:block"
           aria-label="Wooden photo memory board"
         >
           {MEMORIES.map((memory, index) => (
