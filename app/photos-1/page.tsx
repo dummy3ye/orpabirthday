@@ -25,9 +25,9 @@ const MEMORIES: Memory[] = [
   {
     id: 1,
     image: "/photos/photo-1.png",
-    caption: "Where it all began...",
+    caption: "pretty much the starting...",
     note: "that nervous first smile that changed everything for me.",
-    date: "Day One",
+    date: " from those time to these day, You thumbs up is still the peak pose",
     desktopClass: "md:top-[2%] md:left-[3%] md:w-[15rem]",
     mobileRotation: "-rotate-[2.5deg]",
     aspectClass: "aspect-[9/16]",
@@ -37,9 +37,9 @@ const MEMORIES: Memory[] = [
   {
     id: 2,
     image: "/photos/photo-2.png",
-    caption: "My absolute favorite smile.",
+    caption: "the eyes-.",
     note: "the kind of smile that makes the whole world melt away.",
-    date: "Golden hour",
+    date: "ahhh more like the Whole universe is packed there",
     desktopClass: "md:top-[2%] md:left-[27%] md:w-[26rem]",
     mobileRotation: "rotate-[2deg]",
     aspectClass: "aspect-[16/10]",
@@ -49,9 +49,9 @@ const MEMORIES: Memory[] = [
   {
     id: 3,
     image: "/photos/photo-3.jpg",
-    caption: "Every adventure with you.",
-    note: "getting lost anywhere is fine as long as you're holding my hand.",
-    date: "Somewhere special",
+    caption: "Nerd arinaaaa 😭",
+    note: "tui really a great student, even boro hoyeo tor theke tui amar inspirations hoisos a lots of times.",
+    date: "how can a bday be complete without nerd arina",
     desktopClass: "md:top-[2%] md:left-[76%] md:w-[15.5rem]",
     mobileRotation: "-rotate-[2deg]",
     aspectClass: "aspect-[9/16]",
@@ -64,7 +64,7 @@ const MEMORIES: Memory[] = [
     caption: "The quietest days with you.",
     note: "just existing together is so so much more than enough.",
     date: "Sunday lazy air",
-    desktopClass: "md:top-[49%] md:left-[3%] md:w-[24rem]",
+    desktopClass: "md:top-[55%] md:left-[3%] md:w-[26rem]",
     mobileRotation: "rotate-[2.5deg]",
     aspectClass: "aspect-[16/10]",
     attachment: "top-tape",
@@ -85,16 +85,18 @@ const MEMORIES: Memory[] = [
   {
     id: 6,
     image: "/photos/photo-6.jpg",
-    caption: "Looking forward to everything next.",
-    note: "every tomorrow, every soft hope, always with you.",
-    date: "Always & Forever",
-    desktopClass: "md:top-[57%] md:left-[67%] md:w-[25.5rem]",
+    caption: "just peak and perfection.",
+    note: "the pose ? the .",
+    date: "peiercing ta real bhabsilamm T-T",
+    desktopClass: "md:top-[62%] md:left-[67%] md:w-[27rem]",
     mobileRotation: "rotate-[2deg]",
     aspectClass: "aspect-[16/10]",
     attachment: "wood-pin",
     tilt: 2,
   },
 ];
+
+const assetPath = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
 
 /* ------------------------------------------------------------------ */
 /* Single Seamless Solid Wood Slab Background                          */
@@ -284,7 +286,7 @@ function PolaroidCard({
         <div className={`relative block overflow-hidden rounded-[1px] bg-[#1a1410] shadow-[inset_0_2px_4px_rgba(0,0,0,0.55)] transition-all duration-300 ${memory.aspectClass}`}>
           {!imageError ? (
             <Image
-              src={memory.image}
+              src={assetPath(memory.image)}
               alt=""
               fill
               sizes="(max-width: 640px) 45vw, (max-width: 1024px) 260px, 320px"

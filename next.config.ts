@@ -6,6 +6,9 @@ const repoName = "orpabirthday";
 const nextConfig: NextConfig = {
   output: "export",
   basePath: isProd ? `/${repoName}` : "",
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isProd ? `/${repoName}` : "",
+  },
   images: {
     unoptimized: true,
   },
